@@ -10,7 +10,7 @@ const contentStyle = {
 const AppContent = () => {
     return ( 
         <Layout.Content style={contentStyle}>Content</Layout.Content>
-     );
+    );
 }
  
 export default AppContent;
