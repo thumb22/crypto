@@ -6,7 +6,7 @@ import AppContent from "./AppContent";
 import { useContext } from "react";
 import CryptoContext from "../../context/crypto-context";
 
-const AppLoyout = () => {
+const AppLayout = () => {
     const { loading } = useContext(CryptoContext);
 
     if (loading) {
@@ -24,4 +24,4 @@ const AppLoyout = () => {
     );
 };
 
-export default AppLoyout;
+export default AppLayout;
