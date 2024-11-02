@@ -1,4 +1,4 @@
-import { cryptoAssets, cryptoData } from "./data";
+import { cryptoAssets } from "./data";
 
 export async function FetchCrypto() {
     const options = {
