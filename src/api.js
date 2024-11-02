@@ -5,7 +5,9 @@ export async function FetchCrypto() {
         method: "GET",
         headers: {
             accept: "application/json",
-            "X-API-KEY": "QgClI8qicEIsHCxCPgxc8JKWTmr98m+phnLBqu3aphw=",
+            "X-API-KEY":
+                import.meta.env.VITE_COINSTATS_API_KEY ||
+                process.env.COINSTATS_API_KEY,
         },
     };
 
@@ -18,7 +20,7 @@ export async function FetchCrypto() {
             throw new Error(`Error: ${response.status} ${response.statusText}`);
         }
         const data = await response.json();
-        return data; 
+        return data;
     } catch (error) {
         console.error("Failed to fetch crypto data:", error);
         throw error;
