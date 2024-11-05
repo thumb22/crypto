@@ -5,9 +5,7 @@ export async function FetchCrypto() {
         method: "GET",
         headers: {
             accept: "application/json",
-            "X-API-KEY":
-                import.meta.env.VITE_COINSTATS_API_KEY ||
-                process.env.COINSTATS_API_KEY,
+            "X-API-KEY": process.env.COINSTATS_API_KEY, // import.meta.env.VITE_COINSTATS_API_KEY
         },
     };
 
